@@ -17,7 +17,7 @@
     // GitHub Pages SPA fallback: 404.html lands here with ?p=/route
     (function () {
       var p = new URLSearchParams(location.search).get("p");
-      if (p) history.replaceState(null, "", p + location.hash);
+      if (p) history.replaceState(null, "", "/portfolio" + p + location.hash);
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
