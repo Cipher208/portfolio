@@ -1,0 +1,9 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Sart: instruments for agents</title>
+<script>
+  // GitHub Pages serves this for unknown paths; hand the route to the SPA.
+  var base = "/portfolio";
+  var path = location.pathname.replace(new RegExp("^" + base), "") || "/";
+  location.replace(base + "/?p=" + encodeURIComponent(path + location.search + location.hash));
+</script>

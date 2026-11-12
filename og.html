@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>og card generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    html, body { width: 1200px; height: 630px; overflow: hidden; }
+    body {
+      background: oklch(17% 0.008 250);
+      color: oklch(95% 0.005 250);
+      font-family: "Host Grotesk", sans-serif;
+      position: relative;
+    }
+    .grid { position: absolute; inset: 0;
+      background-image: radial-gradient(oklch(42% 0.012 250) 1.2px, transparent 1.2px);
+      background-size: 64px 64px; background-position: 32px 32px; opacity: 0.28;
+    }
+    .wave { position: absolute; left: 0; top: 210px; width: 1200px; height: 220px; opacity: 0.22; }
+    .wrap { position: absolute; inset: 0; padding: 72px 80px; display: flex; flex-direction: column; }
+    .top { display: flex; align-items: baseline; gap: 20px; }
+    .mark { width: 52px; height: 52px; }
+    .name { font-size: 44px; font-weight: 500; letter-spacing: -0.03em; }
+    .tag { color: oklch(71% 0.01 250); font-size: 22px; margin-left: auto; }
+    h1 {
+      margin-top: 118px;
+      font-size: 88px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.02;
+      max-width: 17ch;
+    }
+    .lede { margin-top: 28px; color: oklch(83% 0.008 250); font-size: 28px; max-width: 46ch; line-height: 1.4; }
+    .foot { margin-top: auto; display: flex; align-items: center; gap: 18px; }
+    .url {
+      font-family: "Atkinson Hyperlegible Mono", monospace; font-size: 21px;
+      color: oklch(77% 0.12 245); font-variant-numeric: tabular-nums slashed-zero;
+    }
+    .dot { width: 13px; height: 13px; background: oklch(82% 0.15 80); border-radius: 50%; }
+    .sign { margin-left: auto; color: oklch(71% 0.01 250); font-size: 20px; }
+    .sign b { color: oklch(82% 0.15 80); font-weight: 500; }
+  </style>
+</head>
+<body>
+  <div class="grid"></div>
+  <svg class="wave" viewBox="0 0 1200 220" preserveAspectRatio="none">
+    <path d="M0 110 C 150 40 250 180 400 110 S 650 30 800 110 S 1050 190 1200 100"
+          fill="none" stroke="#6f9fd8" stroke-width="3"/>
+  </svg>
+  <div class="wrap">
+    <div class="top">
+      <svg class="mark" viewBox="0 0 64 64">
+        <rect width="64" height="64" rx="14" fill="#16191e" stroke="#2a2f36"/>
+        <path d="M10 42 C 18 42 20 22 28 22 S 38 38 46 32 C 50 29 52 26 54 24"
+              fill="none" stroke="#6f9fd8" stroke-width="3.5" stroke-linecap="round" opacity="0.7"/>
+        <circle cx="46" cy="32" r="5.5" fill="#f2a54a"/>
+      </svg>
+      <span class="name">Sart</span>
+      <span class="tag">instruments for agents</span>
+    </div>
+    <h1>Agent tools, kept like a bench record.</h1>
+    <p class="lede">SQLite engines, MCP servers, token-saving hooks. Each one measured, dated and signed.</p>
+    <div class="foot">
+      <span class="dot"></span>
+      <span class="url">cipher208.github.io/portfolio</span>
+      <span class="sign">signed <b>Sart</b> · 2026-11</span>
+    </div>
+  </div>
+</body>
+</html>
