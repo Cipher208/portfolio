@@ -2,3 +2,4 @@ node_modules/
 dist/
 dev.log
 .qa-*.png
+tsconfig.tsbuildinfo
